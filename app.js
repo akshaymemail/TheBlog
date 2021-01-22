@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // connect to the database
-mongoose.connect("mongodb+srv://admin-akshay:<password>.vlzrm.mongodb.net/<dbName>",{useNewUrlParser : true, useUnifiedTopology : true})
+mongoose.connect("your database link ",{useNewUrlParser : true, useUnifiedTopology : true})
 
 // crating schema
 const schema = {

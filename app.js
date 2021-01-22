@@ -1,4 +1,3 @@
-//jshint esversion:6
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -19,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // connect to the database
-mongoose.connect("mongodb+srv://admin-akshay:mongodb6@akshay.vlzrm.mongodb.net/blogPostDB",{useNewUrlParser : true, useUnifiedTopology : true})
+mongoose.connect("mongodb+srv://admin-akshay:<password>.vlzrm.mongodb.net/<dbName>",{useNewUrlParser : true, useUnifiedTopology : true})
 
 // crating schema
 const schema = {

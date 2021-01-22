@@ -1,11 +1,17 @@
 <%- include("partials/header") %>
 
-<h1>Home</h1>
+<h1>Hi There! 🙋‍♂️</h1>
 <p><%= homeText %> </p>
+<p>Write a post here and let's see how this blog works! 😎</p>
+<p style="margin-bottom: 5em;">let's get started! 🙌'</p>
 
 <% posts.forEach(post => { %>
-<h1> <%= post.title %> </h1>
-<p> <%= post.content.substring(0,100)+"..." %> <a href="/post/<%= post.title %> ">read more</a> </p>
+<h1> <%= post.name %> </h1>
+<p> <%= post.content.substring(0,100)+"..." %> <a href="/post/<%= post.name %> ">read more</a> </p>
 <% }); %>
+
+<div class="compose">
+    <a role="button" href="/compose" class="btn btn-primary">Write a new post</a>
+</div>
 
 <%- include("partials/footer") %>
